@@ -129,9 +129,12 @@ class MCPClient:
     async def process_query(self, query: str) -> str:
         """Process a query using Gemini and available tools"""
         if not self.session:
+            logger.error("process_query called but MCP session is not initialized.")
             return "Error: MCP session not initialized."
             
-        print(f"\nUser Query: {query}") # Log user query
+        # ---> Comment out the redundant print <--- 
+        # print(f"\nUser Query: {query}") 
+        logger.info(f"Processing query: '{query[:50]}...'" ) # Use single quotes for clarity
         
         # Add message to history
         self.history.append({"role": "user", "parts": [query]})
@@ -267,7 +270,9 @@ Please provide a helpful, user-friendly response based on this information."""
         while True:
             try:
                 query = input("\nQuery: ").strip()
-                print(f"\nInput Query: {query}") # Log input query
+                # ---> Comment out the redundant print <--- 
+                # print(f"\nInput Query: {query}") 
+                # logger.debug(f"User input received: {query}") # Optional: Log raw input
                 
                 if query.lower() == 'quit':
                     break
