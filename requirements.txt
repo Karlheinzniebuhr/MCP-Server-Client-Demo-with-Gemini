@@ -1,0 +1,3 @@
+google-generativeai
+python-dotenv
+mcp-protocols # Verify this is the correct package name for the MCP library you are using 
