@@ -1,3 +1,19 @@
+**TL;DR / Resumen**
+
+1.  Instala dependencias: `pip install -r requirements.txt`
+2.  Crea `.env` con `GEMINI_API_KEY=TU_CLAVE_API_AQUI`.
+3.  Ejecuta: `python mcp_gemini_client.py weather_tool_server.py`
+
+---
+
+**TL;DR / Summary**
+
+1.  Install deps: `pip install -r requirements.txt`
+2.  Create `.env` with `GEMINI_API_KEY=YOUR_API_KEY_HERE`.
+3.  Run: `python mcp_gemini_client.py weather_tool_server.py`
+
+---
+
 # Proyecto Cliente MCP con Gemini y Servidor de Herramientas Meteorológicas
 
 Este repositorio demuestra cómo usar el protocolo MCP (Model-Client-Protocol) para conectar un cliente de IA (usando Google Gemini) con un servidor que proporciona herramientas especializadas (en este caso, herramientas meteorológicas).
